@@ -1,0 +1,249 @@
+package login;
+
+import connection.Connect_sql;
+import java.sql.Connection;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+
+public class Main_signin_petugas extends javax.swing.JFrame {
+
+    Connection con=Connect_sql.getConnection();
+    public Main_signin_petugas() {
+        initComponents();
+    }
+
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        bt_login = new javax.swing.JLabel();
+        ilustrasi = new javax.swing.JLabel();
+        bt_exit = new javax.swing.JLabel();
+        bt_signup = new javax.swing.JButton();
+        txt_password = new javax.swing.JTextField();
+        txt_username = new javax.swing.JTextField();
+        txt_id = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        pnCustom1 = new custom_swing.PnCustom();
+        jPanel1 = new javax.swing.JPanel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bt_login.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        bt_login.setForeground(new java.awt.Color(51, 51, 255));
+        bt_login.setText("Login");
+        bt_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_loginMouseClicked(evt);
+            }
+        });
+        getContentPane().add(bt_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
+
+        ilustrasi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img_icon/bg-ilustrasidokter.png"))); // NOI18N
+        ilustrasi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ilustrasiMouseClicked(evt);
+            }
+        });
+        getContentPane().add(ilustrasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 300));
+
+        bt_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img_icon/exit.png"))); // NOI18N
+        bt_exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_exitMouseClicked(evt);
+            }
+        });
+        getContentPane().add(bt_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, -1, -1));
+
+        bt_signup.setText("SIGN UP");
+        bt_signup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_signupActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
+
+        txt_password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_passwordActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 140, -1));
+        getContentPane().add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 140, -1));
+
+        txt_id.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_idActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 140, -1));
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        jLabel2.setText("SIGN IN");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 90, -1));
+
+        jLabel3.setText("Full Name");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, -1, -1));
+
+        jLabel4.setText("Id Petugas");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, -1));
+
+        jLabel5.setText("Password");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 150, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
+        jLabel6.setText("I've an a account");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+
+        pnCustom1.setBackground(new java.awt.Color(0, 224, 255));
+        pnCustom1.setRoundBottomLeft(100);
+        pnCustom1.setRoundTopLeft(100);
+
+        javax.swing.GroupLayout pnCustom1Layout = new javax.swing.GroupLayout(pnCustom1);
+        pnCustom1.setLayout(pnCustom1Layout);
+        pnCustom1Layout.setHorizontalGroup(
+            pnCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+        pnCustom1Layout.setVerticalGroup(
+            pnCustom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(pnCustom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 300, 300));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 500, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 300));
+
+        setSize(new java.awt.Dimension(500, 300));
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void bt_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_loginMouseClicked
+        new Main_login_petugas().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bt_loginMouseClicked
+
+    private void ilustrasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ilustrasiMouseClicked
+        new Main_login_petugas().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ilustrasiMouseClicked
+
+    private void bt_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_exitMouseClicked
+        dispose();
+    }//GEN-LAST:event_bt_exitMouseClicked
+
+    private void bt_signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_signupActionPerformed
+
+        String fullName, id, Password, query;
+
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Statement st = con.createStatement();
+            if("".equals(txt_username.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Full Name is require", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if("".equals(txt_id.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Email is require", "Error", JOptionPane.ERROR_MESSAGE);
+            } else if("".equals(txt_password.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Password is require", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                fullName = txt_username.getText();
+                id    = txt_id.getText();
+                Password = txt_password.getText();
+                query = "INSERT INTO db_petugas(nama, idPetugas, password)"
+                + "VALUES ('"+fullName+"','"+id+"','"+Password+"')";
+                st.execute(query);
+                txt_username.setText("");
+                txt_id.setText("");
+                txt_password.setText("");
+                showMessageDialog(null, "New account created successfully!");
+                new Main_login_petugas().setVisible(true);
+                this.dispose();
+            }
+        }catch(Exception e){
+            System.out.println("Error!" + e.getMessage());
+        }
+    }//GEN-LAST:event_bt_signupActionPerformed
+
+    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_passwordActionPerformed
+
+    private void txt_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_idActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_idActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Main_signin_petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Main_signin_petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Main_signin_petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Main_signin_petugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Main_signin_petugas().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bt_exit;
+    private javax.swing.JLabel bt_login;
+    private javax.swing.JButton bt_signup;
+    private javax.swing.JLabel ilustrasi;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private custom_swing.PnCustom pnCustom1;
+    private javax.swing.JTextField txt_id;
+    private javax.swing.JTextField txt_password;
+    private javax.swing.JTextField txt_username;
+    // End of variables declaration//GEN-END:variables
+}
